@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en-US" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>MIT Ridonkulous</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/ie.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive-gs-12col.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!--START FANCYBOX DISPLAY-->
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <link rel="stylesheet" href="css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <!--END FANCYBOX DISPLAY-->
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
+    <script>
+    	$(document).ready(function() {
+    		// Reset vertical scroll on refresh
+    		$(window).on('beforeunload', function() {
+    			$(window).scrollTop(0);
+			});
+
+    		// $("#team").load("team.html");
+
+	        $("nav a").bind("click", function(event) {
+	            event.preventDefault();
+
+	            var target = $(this).attr("href");
+	            console.log(this);
+
+	            $("html, body").stop().animate( {
+	                scrollLeft: $(target).offset().left - 180,
+				    scrollTop: $(target).offset().top - 90
+	            }, 375);
+
+	            $(".current").removeClass("current");
+	            $(this).addClass("current");
+	        });
+		});
+    </script> 
+</head>
+
+<body>
+<div id="container" class="container row">
+
+
+
+	<nav class="col span_12">
+		<ul>
+			<li><a href="#home" class="current">HOME</a></li>
+			<li><a href="#about">ABOUT US</a></li>
+			<li><a href="#team">TEAM</a></li>
+			<li><a href="#media">MEDIA</a></li>
+			<li><a href="#footwork">FOOTWORK</a></li>
+		</ul>
+	</nav>
+
+
+
+
+	<div id="home" class="panel">
+		<header class="row">
+			<div id="banner" class="col">
+				<img id="logo" src="images/logo-color-lite.png" class="span_2">
+				<div id="banner-words">
+					<h2 class="span_10">MIT</h2>
+					<h1 class="span_10">RI<span style="color: #05A62D">DONK</span>ULOUS</h1>
+				</div>
+			</div>
+		</header> <!-- End Header -->
+	</div>
+
+
+
+
+	<div id="about" class="panel row">
+				<h3 class="row">ABOUT US</h3>
+				<img src="images/team.jpg" class="row span_8">
+				<div id="aboutus" class="span_8">
+				 	<p style="text-indent: 2em;">Originally founded in the spring of 2005 and reestablished in the fall of 2006, MIT Ridonkulous is a hip hop dance group whose goal is to bring dance to other schools and venues in the greater Boston and New England area.</p>
+					<p style="text-indent: 2em;">Past performances include charity events, collegiate shows, and competitions such as Elements, Prelude, Jam On It, New England Collegiate Dance Collaboration, Defining Rhythm and World of Dance! We host our own show, Footwork, every spring, and have also hosted many workshops taught by the nation's top choreographers.</p>
+					<p style="text-indent: 2em;">Our mission is to have fun, dance, and show the world why we are so RIDONKULOUS!</p>
+				</div>
+			<!-- <div id="right_content" class="col span_6"><img src="images/team_2013_2.jpg" width="460px"></div> -->
+	</div> <!-- End About Us -->
+
+
+
+
+	<div id="team" class="panel row">
+		<div class="span_9">
+		<h3 class="row">CURRENT MEMBERS</h3>
+		<div class="row">
+		</div>
+
+		<h3 class="row">INACTIVE MEMBERS</h3>
+		<div class="row">
+	    <a class="fancybox various" id="inline" rel="group" href="#aaron" title="Aaron Suarez">
+	        <img src="images/bios/thumbnails/rsz_aaron_suarez.jpg" alt="Aaron Suarez" class="bio_image">
+	    </a>
+	    <div style="display:none;">
+	        <div id="aaron" style="dispaly:inline-block;" class="bio_expanded">
+	            <img src="images/bios/Aaron Suarez.jpg" alt="Aaron Suarez" class="bio_image_expanded">
+	            <span style="float:right;width:50%;">
+	                <h4>Name:</h4>
+	                <p>Aaron Suarez</p>
+	                <h4>Hometown:</h4>
+	                <p>Corpus Christi, TX</p>
+	                <h4>Year:</h4>
+	                <p>Fall '12 - Present</p>
+	                <h4>Current Exec Position:</h4>
+	                <p>Captain</p>
+	                <h4>Bio:</h4>
+	                <p>Once overweight and introverted, Aaron Suarez never imagined that dance would one day save his life. Initially inspired by movies like You Got Served and Honey, he started performing with a hip-hop team back home in South Texas. Aaron came to MIT to study Computer Science and to dive into Boston’s dance culture. Currently a member of MIT’s Ridonkulous and Mocha Moves, Aaron can happily say that he is finding a family on the dance floor.</p>
+	            </span>
+	        </div>
+	    </div>
+	    <a class="fancybox various" id="inline" rel="group" href="#angela" title="Angela Wang">
+	        <img src="images/bios/thumbnails/rsz_angela_wang.jpg" alt="Angela Wang" class="bio_image">
+	    </a>
+	    <div style="display:none;">
+
+	    <div id="angela" style="dispaly:inline-block;" class="bio_expanded">
+	        <img src="images/bios/Angela Wang.jpg" alt="Angela Wang" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Angela Wang</p>
+	            <h4>Hometown:</h4>
+	            <p>Taipei City, Taiwan</p>
+	            <h4>Year:</h4>
+	            <p>Fall '10 - Present</p>
+	            <h4>Bio:</h4>
+	            <p>1. When I'm not dancing, I'm either sleeping or eating. 2. I have an Asian accent. 3. My favorite food is fries and dumplings. 4. I don't know what I'm doing or where I'm going after I graduate. 5. I love making sexual jokes. 6. Donk is awesome.</p>
+	        </span>
+	    </div>
+	</div>
+
+	<a class="fancybox various" id="inline" rel="group" href="#camille" title="Camille Sullivan">
+	    <img src="images/bios/thumbnails/rsz_camille_sullivan.jpg" alt="Camille Sullivan" class="bio_image">
+	</a>
+
+	<div style="display:none;">
+	    <div id="camille" style="dispaly:inline-block;">
+	        <img src="images/bios/Camille Sullivan.jpg" alt="Camille Sullivan" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Camille Sullivan</p>
+	            <h4>Hometown:</h4>
+	            <p>Potomac, MD</p>
+	            <h4>Year:</h4>
+	            <p>Fall '12 - Present</p>
+	            <h4>Current Exec Position:</h4>
+	            <p>Artistic Director</p>
+	            <h4>Bio:</h4>
+	            <p>Camille never danced before coming to MIT (well, other than parties/goofing around with friends), and she fell in love with hip-hop dance at the Activities Midway when she watched DT, Donk, and Mocha perform. Camille has danced in DT from then on and has choreographed since the spring of 2012, but she is currently taking a semester off from dancing in DT. She has danced in Mocha Moves since the spring of 2012, and this semester she is Assistant MoShoCaptain as well as one of the main choreographers. Camille is just so amazed at how much she has learned and grown so far, and she is really excited to be pushed even more by being on Donk. Camille cannot wait to be able to contribute to the group through choreographing and hopefully an exec position! Outside of dance, Camille studies Biology. She is preparing to attend medical school after MIT, possibly pursuing an MD/PhD joint degree. She might take a gap year in which she would most likely do MISTI-Chile again for 9 to 12 months. Camille conducts research in lymphoma metastasis in the Bhatia Lab of the Koch Institute, and she tutors General Chemistry and Intro Biology for the Office of Minority Education. Her favorite Donk memories so far are the reading room sesh after the first practice with fellow Baby Donkers and the galleria trip where she knocked over a Van’s shoe display. She also realized that David Han is hilarious, lol. Excited for more memories!!!</p>
+	        </span>
+	    </div>
+	</div>
+	<a class="fancybox various" id="inline" rel="group" href="#claire" title="Claire Patterson">
+	    <img src="images/bios/thumbnails/rsz_claire_patterson.jpg" alt="Claire Patterson" class="bio_image">
+	</a>
+	<div style="display:none;">
+	    <div id="claire" style="dispaly:inline-block;">
+	        <img src="images/bios/Claire Patterson.jpg" alt="Claire Patterson" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Claire Patterson</p>
+	            <h4>Hometown:</h4>
+	            <p>Santa Barbara, CA</p>
+	            <h4>Year:</h4>
+	            <p>Fall '12 - Present</p>
+	            <h4>Current Exec Position:</h4>
+	            <p>Captain</p>
+	            <h4>Bio:</h4>
+	            <p>Claire Patterson joined the Ridonkulous team in the fall of 2012. Claire began her dance training when she was three and immediately fell in love with it. She danced ballet at Gustafson Dance Studio for five years and then began taking jazz and hip-hop classes at Santa Barbara Dance Arts. She has trained in the styles of lyrical, jazz, contemporary, Broadway jazz, hip-hop, and ballet throughout her dance career and was a part Santa Barbara Dance Art’s pre-professional dance companies for six years. In the fall of 2009, Claire began working for the youth run organization Everybody Dance Now! – a non-profit that offers free hip hop dance classes to kids who would otherwise lack the parental support, transportation, or financial resources to participate in such activities. She served as the organization’s Leadership Board Member, Performance Troupe Director, and Dance Instructor for three years.</p>
+	        </span>
+	    </div>
+	</div>
+	<a class="fancybox various" id="inline" rel="group" href="#matt" title="Matthew Fox">
+	    <img src="images/bios/thumbnails/rsz_matthew_fox.jpg" alt="Matthew Fox" class="bio_image">
+	</a>
+	<div style="display:none;">
+	    <div id="matt" style="dispaly:inline-block;">
+	        <img src="images/bios/Matthew Fox.jpg" alt="Matthew Fox" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Matthew Fox</p>
+	            <h4>Hometown:</h4>
+	            <p>Lafayette, LA</p>
+	            <h4>Year:</h4>
+	            <p>Spring '12 - Present</p>
+	            <h4>Bio:</h4>
+	            <p>Matt started dancing during the fall of 2011 when an overtly enthusiastic upperclassman coerced him – an impressionable freshman – to attend Dance Troupe auditions one weekend. Although Matt never saw himself as a dancer, he danced in two collabo dances that semester. His experience allowed him to forge great bonds with friends and to uncover an amazing release of stress at a stress-heavy school.  Dancing energizes a spirit of youth, energy, and passion that uncover the beauty of life, not only for a singular person but also – more importantly – for the group as a whole. During the fall of 2011, Matt began to watch Donk and Mocha as much as possible, aspiring to one day be a part of an even more committed group of dancers. Since the spring of 2012, Matt has found this opportunity in Donk and has grown tremendously as a person and dancer through the experience. When Matt is not dancing, he hangs out with his fraternity brothers at Phi Delts, plays a pickup game of soccer or basketball with some friends, or spends time the dance family that has made his time at MIT so special and so different than what he ever expected.</p>
+	        </span>
+	    </div>
+	</div>
+	<a class="fancybox various" id="inline" rel="group" href="#mitali" title="Mitali Kini">
+	    <img src="images/bios/thumbnails/rsz_mitali_kini.jpg" alt="Mitali Kini" class="bio_image">
+	</a>
+	<div style="display:none;">
+	    <div id="mitali" style="dispaly:inline-block;">
+	        <img src="images/bios/Mitali Kini.jpg" alt="Mitali Kini" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Mitali Kini</p>
+	            <h4>Hometown:</h4>
+	            <p>Scottsdale, AZ</p>
+	            <h4>Year:</h4>
+	            <p>Spring '12 - Present</p>
+	            <h4>Bio:</h4>
+	            <p>The indescribable beauty of dance has impacted Mitali throughout her life. She began dancing (primarily hip-hop) in middle school through high school and always considered it, above all else, a form of pure artistic and personal expression. Music has always been an important part of her life, and dance was a manner of conducting/composing music through movement and life. Since Mitali began dancing at MIT, she has grown as a more self-aware dancer and as a choreographer with a fierce commitment to her teams and students. Nothing inspires her more than being a part of a remarkable team effort, a cooperative improvement, and a loving family that she has had the pleasure of knowing. Mitali currently investigates cancer cell metabolism in the Vander Heiden Lab in the Koch Institute of Integrative Cancer Research, and she hopes to attend medical school after her undergraduate studies. She holds her aspirations high, in both academics and dance, but will never let go of the gift of music and movement that have defined her life thus far.</p>
+	        </span>
+	    </div>
+	</div>
+	<a class="fancybox various" id="inline" rel="group" href="#sammy" title="Samantha Williams">
+	    <img src="images/bios/thumbnails/rsz_samantha_williams.jpg" alt="Samantha Williams" class="bio_image">
+	</a>
+	<div style="display:none;">
+	    <div id="sammy" style="dispaly:inline-block;" class="bio_expanded">
+	        <img src="images/bios/Samantha Williams.jpg" alt="Samantha Williams" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Samantha Williams</p>
+	            <h4>Hometown:</h4>
+	            <p>Brea, CA</p>
+	            <h4>Year:</h4>
+	            <p>Fall '11 - Present</p>
+	            <h4>Bio:</h4>
+	            <p>Sammy started dancing at the age of 3 and hasn't stopped since. She trained and competed with Hart Academy of Dance in La Habra, California in jazz, tap, ballet, contemporary, hip hop, and musical theater. Unwilling to give up dancing in college, she sought out every opportunity to dance when she came to MIT as a freshman. She has been a dancer and choreographer for Fixation, Dance Troupe, and Ridonkulous and continues on the latter two. The members of Ridonkulous have become a family to her and she cherishes the laughs, struggles, tears, and hard work that bond them together. "Dancing is the loftiest, the most moving, the most beautiful of the arts, because it is not mere translation or abstraction from life; it is life itself." -Havelock Ellis "For You, I sing I dance." -Phil Wickham</p>
+	        </span>
+	    </div>
+	</div>
+
+	<a class="fancybox various" id="inline" rel="group" href="#shannon" title="Shannon Basara">
+	    <img src="images/bios/thumbnails/rsz_shannon.jpg" alt="Shannon Basara" class="bio_image">
+	</a>
+	<div style="display:none;">
+	    <div id="shannon" style="dispaly:inline-block;" class="bio_expanded">
+	        <img src="images/bios/Shannon.jpg" alt="Shannon Basara" class="bio_image_expanded">
+	        <span style="float:right;width:50%;">
+	            <h4>Name:</h4>
+	            <p>Shannon Basara</p>
+	            <h4>Hometown:</h4>
+	            <p>Oxnard, CA</p>
+	            <h4>Year:</h4>
+	            <p>Fall '13 - Present</p>
+	            <h4>Bio:</h4>
+	            <p>Shannon is a nursing student at Northeastern but has decided to enter the brave new world of MIT hip hop in the Fall of 2013. She doesn't consider herself a hip hop dancer, as she has trained more in styles such as ballet, pointe, contemporary, jazz, modern, tap and African. But she also says she isn't a runner after having run a half marathon, so take her words with a grain of salt. She is honored to have been chosen to join the Donk family. She loves to push herself in every aspect of dancing and performing and is excited for all of the amazing experiences to come.</p>
+	        </span>
+	    </div>
+	</div>
+	</div>
+
+	<h3 class="row">ALUMNI</h3>
+	<div class="row">
+	</div>
+	</div>
+	</div> <!-- End Team -->
+
+
+
+
+	<div id="media" class="panel">
+		<h3 class="row">VIDEOS</h3>
+
+		<h4 class="row">Footwork 2015
+			<p>&nbsp;</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/JDVsQPqhGUs" frameborder="0" allowfullscreen></iframe>
+		</h4>
+
+		<h4 class="row">World of Dance Boston 2014
+			<p>&nbsp;</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/FcsnG37KwJs" frameborder="0" allowfullscreen></iframe>
+		</h4>
+
+		<h4 class="row">Footwork 2014
+			<p>&nbsp;</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/0hNtZgiOEYQ" frameborder="0" allowfullscreen></iframe>
+		</h4>
+		
+		<h4 class="row">World of Dance Boston 2013
+			<p>&nbsp;</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/JIw1_Ak1eKs" frameborder="0" allowfullscreen></iframe>
+		</h4>
+	</div> <!-- End Videos -->
+
+
+
+
+	<div id="footwork" class="panel">
+	</div> <!-- End Footwork -->
+
+
+
+
+	<footer class="span_12">
+		<!-- Social media icons by cssauthor.com -->
+		<div id="social" class="row">
+			<a href="mailto:ridonk-exec@mit.edu" target="_blank"><img src="images/email.png" alt="E-mail" class="span_0 contact_icon"></a>
+			<a href="https://www.facebook.com/MITRIDONKULOUS" target="_blank"><img src="images/facebook.png" alt="Facebook" class="span_0 contact_icon"></a>
+			<a href="https://www.youtube.com/RIDONKEY" target="_blank"><img src="images/youtube.png" alt="YouTube" class="span_0 contact_icon"></a>
+			<a href="https://instagram.com/MITRIDONKULOUS" target="_blank"><img src="images/instagram.png" alt="Instagram" class="span_0 contact_icon"></a>
+			<a href="https://twitter.com/MITRIDONK" target="_blank"><img src="images/twitter.png" alt="Twitter" class="span_0 contact_icon"></a></br>
+		</div>
+		<div id="copyright" class="row">
+			<p>&copy; MIT RI<span style="color: #05A62D">DONK</span>ULOUS 2015 ALL RIGHTS RESERVED</p>
+		</div>
+	</footer>
+
+
+
+</div> <!-- End Container -->
+</body>
+</html>	
